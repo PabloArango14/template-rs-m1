@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
     <h1>Proyecto M1</h1>
-    <div>
+    <section>
       <h2>Sobre mí</h2>
       <p>
         Soy Psicólogo Profesional, con inglés C1 y énfasis en el campo IT,
@@ -22,6 +22,102 @@
         Actualmente, me encuentro en búsqueda de oportunidades como
         desarrollador frontend bilingüe con énfasis en ReactJS.
       </p>
-    </div>
+    </section>
+    <section>
+      <h2>Mis Tecnologías Favoritas</h2>
+
+      <div class="tech-card">
+        <img
+          class="tech-logo"
+          src="https://shorturl.at/djtvU"
+          alt="HTML Logo" />
+        <div class="tech-info">
+          <h3>HTML5</h3>
+          <p>Lenguaje de marcado para la creación de páginas web.</p>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <img class="tech-logo" src="https://shorturl.at/vFKMZ" alt="CSS Logo" />
+        <div class="tech-info">
+          <h3>CSS3</h3>
+          <p>Lenguaje de estilos para el diseño de páginas web.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <img
+          class="tech-logo"
+          src="https://shorturl.at/JQSX5"
+          alt="JavaScript Logo" />
+        <div class="tech-info">
+          <h3>JavaScript</h3>
+          <p>Lenguaje de programación para desarrollo web.</p>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <img
+          class="tech-logo"
+          src="https://shorturl.at/kGMZ7"
+          alt="React.js Logo" />
+        <div class="tech-info">
+          <h3>React.js</h3>
+          <p>
+            Biblioteca de JavaScript para construir interfaces de usuario
+            interactivas.
+          </p>
+        </div>
+      </div>
+    </section>
+    <form id="activity-form">
+      <label for="title">TÍTULO:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="description">DESCRIPCIÓN:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="imageUrl">URL DE IMAGEN:</label>
+      <input type="url" id="imageUrl" name="imageUrl" required>
+
+      <button type="button" onclick="addActivity()">Agregar Actividad</button>
+    </form>
+
+   
+    <div id="activity-container"></div>
+  </section>
+
+  <script>
+   
+    function addActivity() {
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const imageUrl = document.getElementById('imageUrl').value;
+
+      
+      if (title && description && imageUrl) {
+       
+        const activityCard = document.createElement('div');
+        activityCard.className = 'activity-card';
+        activityCard.innerHTML = `
+          <img class="activity-image" src="${imageUrl}" alt="${title}">
+          <div class="activity-info">
+            <h3>${title}</h3>
+            <p>${description}</p>
+          </div>
+        `;
+
+        
+        const activityContainer = document.getElementById('activity-container');
+        activityContainer.appendChild(activityCard);
+
+        
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('imageUrl').value = '';
+      } else {
+        alert('Por favor, completa todos los campos.');
+      }
+    }
+  </script>
   </body>
 </html>

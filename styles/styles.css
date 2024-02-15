@@ -1,0 +1,91 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+h2 {
+  color: #333;
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.tech-info {
+  color: #333;
+}
+#activity-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#activity-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#activity-form input,
+#activity-form textarea,
+#activity-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+#activity-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.activity-card {
+  width: calc(33.33% - 15px);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.activity-image {
+  width: 100%;
+  height: auto;
+}
+
+.activity-info {
+  padding: 15px;
+  box-sizing: border-box;
+}

@@ -1,7 +1,7 @@
 /* reset.css */
 
 /* Eliminar márgenes y rellenos predeterminados */
-body,
+/* body,
 h1,
 h2,
 h3,
@@ -21,10 +21,10 @@ fieldset,
 legend {
   margin: 0;
   padding: 0;
-}
+} */
 
 /* Establecer estilos predeterminados para elementos semánticos */
-html {
+/* html {
   box-sizing: border-box;
 }
 
@@ -32,32 +32,32 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 
 /* Eliminar estilos de lista predeterminados */
-ol,
+/* ol,
 ul {
   list-style: none;
-}
+} */
 
 /* Establecer márgenes y rellenos a cero para elementos de formulario */
-button,
+/* button,
 input,
 select,
 textarea {
   margin: 0;
-}
+} */
 
 /* Restablecer el valor predeterminado del color del texto */
-a,
+/* a,
 button {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 /* Establecer estilos de tabla a 'collapse' para evitar márgenes dobles en las celdas de la tabla */
-table {
+/* table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
